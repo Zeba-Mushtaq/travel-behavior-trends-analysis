@@ -1,73 +1,115 @@
-# 🌍 Travel Behavior & Trends Analysis (2019–2024)
+# 🌍 Where Did the World Go? — Global Travel Behavior & Trends (2019–2024)
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458)](https://pandas.pydata.org/)
 [![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Viz-3F4F75)](https://plotly.com/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B)](https://streamlit.io/)
+[![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Viz-4c72b0)](https://seaborn.pydata.org/)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF)](https://www.kaggle.com/zebamushtaq)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> A data analytics project exploring **global tourism patterns from 2019 to 2024** — covering the pre-pandemic baseline, the pandemic-era collapse, and the post-pandemic recovery in travel behavior. Built end-to-end with **Python, Pandas, Plotly, and Streamlit**.
+> *10,000 trips. 6 years. 1 pandemic. And a recovery nobody saw coming quite like this.*
+
+This project analyzes a synthetic global tourism dataset to tell the real story behind where the world traveled — and stopped traveling — between 2019 and 2024. It's not just charts. It's a full data narrative covering the pre-pandemic baseline, the COVID collapse, and the patterns that emerged on the other side.
+
+---
+
+## 📊 Key Visualizations
+
+### 1. The Crash and the Comeback
+
+Travel dropped **48.8% in a single year** (2019→2020). By 2023, it had grown **226% from the 2020 low** — surpassing pre-pandemic levels entirely.
+
+![Yearly Trend](images/01_yearly_trend.png)
+
+---
+
+### 2. When Does the World Travel?
+
+The pandemic hit every month equally. But the recovery wasn't uniform — some months bounced back faster than others.
+
+![Monthly Heatmap](images/02_heatmap_month_year.png)
+
+---
+
+### 3. Season-by-Season Breakdown
+
+Summer edges out other seasons consistently, but the spread is narrower than you'd expect. People travel year-round.
+
+![Season Trend](images/08_season_trend.png)
+
+---
+
+### 4. Who Actually Takes These Trips?
+
+Families make up 25% of all trips — every single year, through the pandemic and out the other side. The most consistent traveler segment in the dataset.
+
+![Traveler Type](images/03_traveler_type_donut.png)
+
+---
+
+### 5. Why Do People Travel?
+
+Leisure/Tourism leads by a wide margin. But the more interesting story is in the smaller categories — Digital Nomads, Medical Tourism, Religious travel — and how they shifted.
+
+![Travel Purpose](images/04_travel_purpose.png)
+
+---
+
+### 6. The Remote Work Effect
+
+Digital Nomad trips more than doubled between 2021 and 2023. Borders stayed open for laptops even when they didn't for tourists.
+
+![Digital Nomad](images/06_digital_nomad.png)
+
+---
+
+### 7. Top Destination Countries
+
+France, Egypt, Thailand, Malaysia, New Zealand — the top 5 destinations are spread across 4 different continents. Global tourism is genuinely global.
+
+![Top Destinations](images/05_top_destinations.png)
+
+---
+
+### 8. Who Stays Longest?
+
+The median trip is 11 nights. The mean is 17.5. Group Tours and Business Travelers pull that average up significantly.
+
+![Duration Heatmap](images/07_duration_heatmap.png)
 
 ---
 
 ## 📌 Project Overview
 
-This project analyzes a synthetic global tourism dataset (10,000+ trip records) to uncover patterns in:
+**Dataset:** Synthetic global tourism data — 10,000 trip records, 2019–2024  
+**Columns:** trip_id, year, month, season, origin_country, destination_country, travel_purpose, traveler_type, num_travelers, duration_nights
 
-- 🧭 **Travel volume trends** across years (2019–2024)
-- 🌦️ **Seasonal travel behavior** (which seasons see the most trips, and why)
-- 🎯 **Purpose of travel** (Business vs Leisure/Tourism vs other categories)
-- 👥 **Traveler type segmentation** (Solo, Couple, Family, Group Tours)
-- 🛬 **Top origin and destination countries**
-- 🌙 **Trip duration patterns** by traveler type and travel purpose
-- 📉 **COVID-19 impact** — visualizing the dip in travel during 2020–2021 and the recovery curve afterward
-
-The goal is to turn raw trip-level data into **clear, visual, and actionable insights** about how global travel behavior shifted across one of the most disruptive periods in modern tourism history.
+> ⚠️ This is a **synthetic dataset** built to reflect realistic global tourism patterns. It does not represent official tourism statistics.
 
 ---
 
-## 🗂️ Dataset
+## 🔍 Key Findings
 
-**File:** `global_tourism_travel_trends-selected-columns.csv`
-**Size:** 10,000 trip records
-**Time Range:** 2019 – 2024
-
-| Column | Description |
-|---|---|
-| `trip_id` | Unique identifier for each trip |
-| `year` | Year the trip took place (2019–2024) |
-| `month` | Month of travel (1–12) |
-| `season` | Season label (Spring, Summer, Autumn, Winter) |
-| `origin_country` | Traveler's country of origin |
-| `destination_country` | Country traveled to |
-| `travel_purpose` | Purpose of trip (Business, Leisure/Tourism, etc.) |
-| `traveler_type` | Type of traveler (Solo, Couple, Family, Group Tour) |
-| `num_travelers` | Number of travelers in the trip |
-| `duration_nights` | Length of stay in nights |
-
-> ⚠️ This is a **synthetic dataset** created for educational and portfolio purposes — it does not represent real tourism statistics.
-
----
-
-## 🔍 Key Questions This Project Answers
-
-1. How did global travel volume change year-over-year from 2019 to 2024?
-2. Which seasons are the most popular for travel, and does this vary by traveler type?
-3. What are the most common travel purposes, and how have they shifted post-pandemic?
-4. Which countries are the top sources and destinations for travelers?
-5. How does trip duration differ between Solo travelers, Couples, Families, and Group Tours?
-6. Is there a visible "recovery curve" in the data after the 2020 pandemic dip?
+- Travel volume fell **48.8%** from 2019 to 2020 — the steepest single-year drop in the dataset
+- Recovery was not linear: 2021 was still 34% below 2019 levels before the real rebound in 2022
+- **Families** are the most consistent traveler segment — 25% of trips every year regardless of disruptions
+- **Digital Nomad** travel grew 261% from 2021 to 2023, reflecting the shift to remote work
+- **Pakistan** appears in the top 10 origin countries with 496 outbound trips — one of the stronger South Asian representations in the data
+- France, Egypt, and Thailand are the top 3 destinations — consistent across all 6 years
+- The median vs mean gap in trip duration (11 vs 17.5 nights) is driven by Group Tours and Business Travelers who commit to longer stays
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Python 3.10+**
-- **Pandas** — data cleaning & aggregation
-- **Matplotlib / Seaborn** — static visualizations
-- **Plotly** — interactive charts & choropleth maps
-- **Streamlit** — interactive dashboard deployment
-- **Jupyter Notebook** — exploratory data analysis (EDA)
+| Tool | Use |
+|---|---|
+| Python 3.10+ | Core language |
+| Pandas | Data loading, cleaning, aggregation |
+| Matplotlib | Static chart rendering |
+| Seaborn | Heatmaps and statistical plots |
+| Plotly | Interactive charts in notebook |
+| Jupyter Notebook | Full EDA narrative |
 
 ---
 
@@ -80,13 +122,17 @@ travel-behavior-trends-analysis/
 │   └── global_tourism_travel_trends-selected-columns.csv
 │
 ├── notebooks/
-│   └── travel_trends_eda.ipynb        # Full exploratory analysis
-│
-├── app/
-│   └── streamlit_app.py               # Interactive dashboard
+│   └── travel_trends_eda.ipynb        # Full story-driven EDA
 │
 ├── images/
-│   └── (charts, dashboard screenshots, GIFs)
+│   ├── 01_yearly_trend.png
+│   ├── 02_heatmap_month_year.png
+│   ├── 03_traveler_type_donut.png
+│   ├── 04_travel_purpose.png
+│   ├── 05_top_destinations.png
+│   ├── 06_digital_nomad.png
+│   ├── 07_duration_heatmap.png
+│   └── 08_season_trend.png
 │
 ├── requirements.txt
 ├── LICENSE
@@ -95,74 +141,38 @@ travel-behavior-trends-analysis/
 
 ---
 
-## 🚀 How to Run This Project
+## 🚀 How to Run
 
-### 1. Clone the repository
 ```bash
 git clone https://github.com/Zeba-Mushtaq/travel-behavior-trends-analysis.git
 cd travel-behavior-trends-analysis
-```
-
-### 2. Install dependencies
-```bash
 pip install -r requirements.txt
-```
-
-### 3. Run the Jupyter notebook
-```bash
 jupyter notebook notebooks/travel_trends_eda.ipynb
 ```
 
-### 4. Launch the interactive dashboard
-```bash
-streamlit run app/streamlit_app.py
-```
-
 ---
 
-## 📊 Sample Visualizations
+## 🔮 What's Next
 
-*(Add screenshots/GIFs of your charts and dashboard here once generated)*
-
-- Yearly travel volume trend (2019–2024)
-- Seasonal distribution heatmap
-- Travel purpose breakdown by year
-- Top 10 destination countries
-- Trip duration by traveler type
-- COVID-19 impact timeline
-
----
-
-## 📈 Key Insights
-
-*(To be updated after analysis is complete)*
-
-- ...
-- ...
-- ...
-
----
-
-## 🔮 Future Work
-
-- Time-series forecasting of travel demand using Prophet/ARIMA
-- Clustering travelers into behavioral segments using K-Means
+- Time-series forecasting of travel demand (Prophet / ARIMA)
+- K-Means clustering to segment travelers into behavioral profiles
+- Streamlit dashboard for interactive exploration
 - Geographic flow mapping of origin → destination routes
-- Sentiment analysis if review/feedback data is added
 
 ---
 
 ## 👩‍💻 Author
 
-**Zeba Mushtaq**
-Data Analyst | AI/ML Enthusiast | Building in Public
+**Zeba Mushtaq** — Data Analyst · AI/ML · Building in Public
 
-- 🌐 [Portfolio](https://zeba-portfolio.vercel.app)
-- 💻 [GitHub](https://github.com/Zeba-Mushtaq)
-- ✍️ [Medium](https://medium.com/@zebamushtaq) | [Hashnode](https://zebabuilds.hashnode.dev) | [DEV.to](https://dev.to/zebamushtaq)
+[![Portfolio](https://img.shields.io/badge/Portfolio-zeba--portfolio.vercel.app-black)](https://zeba-portfolio.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Zeba--Mushtaq-181717?logo=github)](https://github.com/Zeba-Mushtaq)
+[![Hashnode](https://img.shields.io/badge/Hashnode-zebabuilds-2962FF)](https://zebabuilds.hashnode.dev)
+[![DEV.to](https://img.shields.io/badge/DEV.to-zebamushtaq-0A0A0A)](https://dev.to/zebamushtaq)
+[![Medium](https://img.shields.io/badge/Medium-zebamushtaq-black)](https://medium.com/@zebamushtaq)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+[MIT License](LICENSE)
